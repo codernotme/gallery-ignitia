@@ -17,10 +17,10 @@ const ImagePreview = ({ imageUrl, onClose }: ImagePreviewProps) => {
         >
           <X className="w-8 h-8" />
         </button>
-        
         <div className="relative w-full h-full flex flex-col items-center justify-center p-4">
           <img
             src={imageUrl}
+            alt="Preview"
             className="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
           />
         </div>
