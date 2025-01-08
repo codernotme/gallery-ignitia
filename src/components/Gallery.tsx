@@ -3,7 +3,6 @@ import ImagePreview from './ImagePreview';
 
 interface Photo {
   url: string;
-  caption: string;
 }
 
 const Gallery = () => {
@@ -11,120 +10,91 @@ const Gallery = () => {
 
   const photos = [
     {
-      url: "./assests/1.jpg",
-      caption: "The Stylish Explorer"
+      url: "./assests/1.jpg"
     },
     {
-      url: "./assests/2.jpg",
-      caption: "The Cool Cat"
+      url: "./assests/2.jpg"
     },
     {
-      url: "./assests/3.jpg",
-      caption: "The Athletic Pro"
+      url: "./assests/3.jpg"
     },
     {
-      url: "./assests/4.jpg",
-      caption: "The Winter Adventurer"
+      url: "./assests/4.jpg"
     },
     {
-      url: "./assests/5.jpg",
-      caption: "The Music Lover"
+      url: "./assests/5.jpg"
     },
     {
-      url: "./assests/6.jpg",
-      caption: "The Intellectual"
+      url: "./assests/6.jpg"
     },
     {
-      url: "./assests/7.jpg",
-      caption: "The Intellectual"
+      url: "./assests/7.jpg"
     },
     {
-      url: "./assests/8.jpg",
-      caption: "The Intellectual"
+      url: "./assests/8.jpg"
     },
     {
-      url: "./assests/9.jpg",
-      caption: "The Intellectual"
+      url: "./assests/9.jpg"
     },
     {
-      url: "./assests/10.jpg",
-      caption: "The Intellectual"
+      url: "./assests/10.jpg"
     },
     {
-      url: "./assests/11.jpg",
-      caption: "The Intellectual"
+      url: "./assests/11.jpg"
     },
     {
-      url: "./assests/12.jpg",
-      caption: "The Intellectual"
+      url: "./assests/12.jpg"
     },
     {
-      url: "./assests/13.jpg",
-      caption: "The Intellectual"
+      url: "./assests/13.jpg"
     },
     {
-      url: "./assests/14.jpg",
-      caption: "The Intellectual"
+      url: "./assests/14.jpg"
     },
     {
-      url: "./assests/15.jpg",
-      caption: "The Intellectual"
+      url: "./assests/15.jpg"
     },
     {
-      url: "./assests/16.jpg",
-      caption: "The Intellectual"
+      url: "./assests/16.jpg"
     },
     {
-      url: "./assests/17.jpg",
-      caption: "The Intellectual"
+      url: "./assests/17.jpg"
     },
     {
-      url: "./assests/18.jpg",
-      caption: "The Intellectual"
+      url: "./assests/18.jpg"
     },
     {
-      url: "./assests/19.jpg",
-      caption: "The Intellectual"
+      url: "./assests/19.jpg"
     },
     {
-      url: "./assests/20.jpg",
-      caption: "The Intellectual"
+      url: "./assests/20.jpg"
     },
     {
-      url: "./assests/21.jpg",
-      caption: "The Intellectual"
+      url: "./assests/21.jpg"
     },
     {
-      url: "./assests/22.jpg",
-      caption: "The Intellectual"
+      url: "./assests/22.jpg"
     },
     {
-      url: "./assests/23.jpg",
-      caption: "The Intellectual"
+      url: "./assests/23.jpg"
     },
     {
-      url: "./assests/24.jpg",
-      caption: "The Intellectual"
+      url: "./assests/24.jpg"
     },
     {
-      url: "./assests/25.jpg",
-      caption: "The Intellectual"
+      url: "./assests/25.jpg"
     },
     {
-      url: "./assests/26.jpg",
-      caption: "The Intellectual"
+      url: "./assests/26.jpg"
     },
     {
-      url: "./assests/27.jpg",
-      caption: "The Intellectual"
+      url: "./assests/27.jpg"
     },
     {
-      url: "./assests/28.jpg",
-      caption: "The Intellectual"
+      url: "./assests/28.jpg"
     },
     {
-      url: "./assests/29.jpg",
-      caption: "The Intellectual"
+      url: "./assests/29.jpg"
     },
 
   ];
@@ -146,13 +116,10 @@ const Gallery = () => {
             >
               <img
                 src={photo.url}
-                alt={photo.caption}
                 className="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="absolute bottom-6 left-6 text-white">
-                  <p className="text-lg font-medium">{photo.caption}</p>
-                </div>
+                
               </div>
             </div>
           ))}
@@ -162,7 +129,6 @@ const Gallery = () => {
       {selectedPhoto && (
         <ImagePreview
           imageUrl={selectedPhoto.url}
-          caption={selectedPhoto.caption}
           onClose={() => setSelectedPhoto(null)}
         />
       )}
